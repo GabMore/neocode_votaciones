@@ -1,0 +1,118 @@
+<div style="text-align: center; margin-top: 20px;">
+    
+    <div>
+        <h1 style="border:1px solid black;
+        display: inline-block; padding-left: 25px; padding-right: 25px;">E-14 DELEGADOS
+        </h1>
+    
+        <div class="img">
+            <img style="width: 90px; margin-left: 415px;
+                 margin-top: -46px;" src="assets/escudo.jpeg" alt="escudo">
+        </div>
+    </div>
+    
+    <h3 style="margin-top: -113px;">ACTA DE ESCRUTINIO DE <br>
+        LOS JURADOS DE VOTACIÓN <br>
+        ELECCIONES LOCALES <br>
+        29 DE MAYO DEL 2023
+    </h3>
+</div>
+
+
+<form (ngSubmit)="submitForm()" #formulario="ngForm">
+    
+        <div class="cont-form" style="text-align: center; border: 1px solid black;
+             padding: 10px; margin-left: auto; margin-right: auto; display: table;">
+        
+            <div style="text-align: left;">
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Departamento</mat-label>
+                        <mat-select name="departamento" [(ngModel)]="formularioData.departamento">
+                          <mat-option *ngFor="let depto of departamentos" [value]="depto">
+                            {{depto}}
+                          </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>    
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Municipio</mat-label>
+                        <mat-select name="municipio" [(ngModel)]="formularioData.municipio">
+                          <mat-option *ngFor="let mun of municipios" [value]="mun">
+                            {{mun}}
+                          </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>    
+                <div>
+                    <mat-form-field appearance="outline">
+                          <mat-label>Lugar</mat-label>
+                          <mat-select name="lugar" [(ngModel)]="formularioData.lugar">
+                            <!-- <mat-option *ngFor="let lug of lugares" [value]="lug">
+                              {{lug}}
+                            </mat-option> -->
+                          </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+        
+            <div style="display: flex; justify-content: space-between;">
+                <mat-form-field appearance="outline">
+                    <mat-label>Zona</mat-label>
+                    <mat-select name="zona" [(ngModel)]="formularioData.zona">
+                      <!-- <mat-option *ngFor="let zon of zonas" [value]="zon">
+                        {{zon}}
+                      </mat-option> -->
+                    </mat-select>
+                </mat-form-field>
+        
+                <mat-form-field appearance="outline" style="margin-left: 5px; margin-right: 5px">
+                    <mat-label>Puesto</mat-label>
+                    <mat-select name="puesto" [(ngModel)]="formularioData.puesto">
+                      <!-- <mat-option *ngFor="let puest of puestos" [value]="puest">
+                        {{puest}}
+                      </mat-option> -->
+                    </mat-select>
+                </mat-form-field>
+        
+                <mat-form-field appearance="outline">
+                    <mat-label>Mesa</mat-label>
+                    <mat-select name="mesa" [(ngModel)]="formularioData.mesa">
+                      <!-- <mat-option *ngFor="let mun of mesas" [value]="mes">
+                        {{mes}}
+                      </mat-option> -->
+                    </mat-select>
+                </mat-form-field>
+            </div>    
+        </div>
+
+        <!-- <div style="text-align: center;">
+            <p>X    x-   xx   -   xx -    X</p>
+        </div> -->
+
+        <div style="display: flex; justify-content: center; margin-top: 30px;">
+            <mat-form-field style="width: 325px;" appearance="outline">
+                <mat-select>
+                    <mat-option value="1">DELEGADOS ASAMBLEA ADIH</mat-option>
+                    <mat-option value="2">DELEGADOS CONGRESO ADIH</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+       
+        <!-- <div >
+          <mat-form-field>
+            <mat-label></mat-label>
+            <mat-select >
+              <mat-option *ngFor="let valor of [1, 2, 3, 4, 5]">
+                {{valor}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div> -->
+
+        <div style="text-align: center;">
+          <button style="background-color: rgba(0,188,62,255);" type="submit" mat-raised-button>Enviar</button>
+        </div>
+</form>
+     

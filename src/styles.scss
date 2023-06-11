@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// GRMB
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label{
+    color: rgba(0,188,62,255);
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading{
+    border-color: rgba(0,188,62,255);
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch{
+    border-color: rgba(0,188,62,255);
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing{
+    border-color: rgba(0,188,62,255);
+}
+
+.mat-mdc-text-field-wrapper{
+    height: 50px !important;
+}
+
+.mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label{
+    padding-top: -10px !important;
+}
+
+.mat-primary .mat-pseudo-checkbox-checked.mat-pseudo-checkbox-minimal::after{
+    border-color: rgba(0,188,62,255);
+}
+
+.mat-primary .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text{
+    color: rgba(0,188,62,255);
+}
+// GRMB
